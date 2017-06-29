@@ -14,7 +14,7 @@ public class Event {
 	
 	private String city, start_date, name, event_code,
 	end_date, country, state_prov, key;
-	private DistrictEntry district;
+	private District district;
 	
 	public Webcast[] getWebcasts() {
 		return webcasts;
@@ -100,9 +100,28 @@ public class Event {
 	public String getKey() {
 		return key;
 	}
-	public DistrictEntry getDistrict() {
+	public District getDistrict() {
 		return district;
 	}
+	
+	public class Webcast {
+		
+		private String type, channel, file;
+
+		public String getType() {
+			return type;
+		}
+
+		public String getChannel() {
+			return channel;
+		}
+
+		public String getFile() {
+			return file;
+		}
+
+	}
+
 
 
 }

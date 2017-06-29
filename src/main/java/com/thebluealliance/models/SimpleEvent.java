@@ -4,7 +4,7 @@ public class SimpleEvent {
 	
 	private String city, start_date, name, event_code,
 		end_date, country, state_prov, event_type, key;
-	private DistrictEntry district;
+	private District district;
 	private int year;
 	
 	public String getCity() {
@@ -34,7 +34,7 @@ public class SimpleEvent {
 	public String getKey() {
 		return key;
 	}
-	public DistrictEntry getDistrict() {
+	public District getDistrict() {
 		return district;
 	}
 	public int getYear() {

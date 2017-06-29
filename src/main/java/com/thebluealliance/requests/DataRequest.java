@@ -9,17 +9,17 @@ import java.net.URL;
 import com.thebluealliance.Constants;
 
 
-public class TBA {
+public class DataRequest {
 	
-	private final String AUTH_KEY;
-	public final TeamRequest teamRequest;
+	private String AUTH_KEY;
 	
-	public TBA(String authKey){
-		this.AUTH_KEY = authKey;
-		teamRequest = new TeamRequest(this);
+	
+	public DataRequest(String authKey){
+		AUTH_KEY = authKey;
+		
 	}
 	
-    private ApiResponse getData(HttpURLConnection con) throws Exception {
+    private APIResponse getData(HttpURLConnection con) throws Exception {
         try {
             con.setRequestMethod("GET");
             con.addRequestProperty("User-Agent", "Desktop");
@@ -31,7 +31,7 @@ public class TBA {
             
             in.close();
             
-            return new ApiResponse(response.toString(), con.getHeaderField("Last-Modified"), con.getResponseCode());
+            return new APIResponse(response.toString(), con.getHeaderField("Last-Modified"), con.getResponseCode());
         }
         catch(IOException ex) { 
         	if(ex.getMessage().contains("401"))
@@ -45,7 +45,7 @@ public class TBA {
     }
 
 
-    public ApiResponse getDataFromTBA(String urlDirectory) {
+    public APIResponse getDataTBA(String urlDirectory) {
         try {
             URL url = new URL(Constants.TBA_BASE_URL+urlDirectory);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -56,7 +56,7 @@ public class TBA {
         return null;
     }
     
-    public ApiResponse getDataFromTBA(String urlDirectory, String lastModified) {
+    public APIResponse getDataTBA(String urlDirectory, String lastModified) {
         try {
             URL url = new URL(Constants.TBA_BASE_URL+urlDirectory);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();

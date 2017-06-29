@@ -1,6 +1,6 @@
 package com.thebluealliance.models;
 
-public class DistrictEntry {
+public class District {
 	
 	private String abbreviation, display_name, key;
 	private int year;

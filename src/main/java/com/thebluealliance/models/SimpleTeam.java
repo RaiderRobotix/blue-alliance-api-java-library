@@ -17,13 +17,13 @@ public class SimpleTeam {
 	public String getCity() {
 		return city;
 	}
-	public String getState_prov() {
+	public String getStateProv() {
 		return state_prov;
 	}
 	public String getCountry() {
 		return country;
 	}
-	public int getTeam_number() {
+	public int getTeamNumber() {
 		return team_number;
 	}
 	private int team_number;
