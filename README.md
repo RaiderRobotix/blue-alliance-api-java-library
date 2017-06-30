@@ -2,7 +2,7 @@
 
 Java client library to retrieve data from The Blue Alliance using TBA API v3
 
-The library is essentially complete, but documentation is in progress.
+Full Javadoc documentation can be found [here](/docs/)
 
 ## Usage
 
@@ -13,59 +13,40 @@ Begin by creating a TBA object with your Read TBA API Key. This can be found or 
 
 ### Regular Usage
 
-The library allows access to almost all of the calls in [The Blue Alliance API v3 documentation](https://www.thebluealliance.com/apidocs/v3). They are grouped into requests with team, event, district, or match parameters:
+The library allows access to almost all of the calls in [The Blue Alliance API v3 documentation](https://www.thebluealliance.com/apidocs/v3). 
 
-**`tba.teamRequest`**
+They are grouped into requests with team, event, district, or match parameters, and you will need to use the `teamRequest`, `eventRequest`, or `matchRequest` instance variables found in the [`TBA` class](/docs/com/thebluealliance/api/v3/TBA.html).
 
- * `getTeam(teamNumber)`: Gets a `Team` object for the team referenced by the given number (an `int`).
- * `getSimpleTeam(teamNumber): Gets a `SimpleTeam` object for the team referenced by the given number.
- * `getYearsParticipated(teamNumber): Gets a list of years in which the team participated in at least one competition.
- * getDistricts(teamNumber): Gets a list of `District` objects for each year the team was in a district. Will return `null` if the team was never in a district.
- * to be continued
+Here is an example of retrieving an array of teams in the FIRST Mid-Atlantic district in 2017:
 
-**`tba.eventRequest`**
+    Team[] midAtlanticTeams = tba.districtRequest.getTeams("2017mar");
 
- * to be continued
-
-**`tba.districtRequest`**
- 
- * to be continued
-
-**`tba.matchRequest`**
-
- * to be continued
+A list of request methods for each request object can be found [here](/docs/com/thebluealliance/api/v3/requests/package-summary.html).
 
 ### Advance Usage
 
-If you want to utilize the `If-Modified-Since` and `Last-Modified` headers, you will need to make a direct URL request (following the documentation). This will return an `APIResponse` object with JSON data, the HTTP response code, and the `Last-Modified` header. 
+If you want to utilize the `If-Modified-Since` and `Last-Modified` headers, you will need to make a direct URL request with the [`getDataTBA(String urlDirectory)` method](/docs/com/thebluealliance/api/v3/requests/DataRequest.html#getDataTBA-java.lang.String-java.lang.String-) in the [`DataRequest` class](/docs/com/thebluealliance/api/v3/requests/DataRequest.html). This will return an [`APIResponse`](/docs/com/thebluealliance/api/v3/requests/APIResponse.html) object with JSON data, the HTTP response code, and the `Last-Modified` header. 
 
-The JSON data will need to be deserialized into an object model with a method in the `Deserializer` class before being used.
+The JSON data will need to be deserialized into an object model with a method in the [`Deserializer` class](/docs/com/thebluealliance/api/v3/Deserializer.html) before being used.
 
-Here is an (extremely inefficient) example of continuously fetching the `Team` objects for an event (`2017njfla`), if they have been updated.
+Here is an example of continuously fetching the `Match` objects for the 2017 Mount Olive District Event, if they have been updated. Note that this is very inefficient.
 
-    TBA tba = new TBA(authKey);
-	APIResponse resp = tba.dataRequest.getDataTBA("/event/2017njfla/teams");
+	APIResponse resp = tba.dataRequest.getDataTBA("/event/2017njfla/matches");
 	String lastModified = resp.getLastModified();
-	Team[] teamList = Deserializer.toTeamArray(resp.getJson());
-		while(true){
-			resp = tba.dataRequest.getDataTBA("/event/2017njfla/teams", lastModified);
-			if(resp.getResponseCode()!=304){
-				teamList = Deserializer.jsonToTeamArray(resp.getJson());
-				lastModified = resp.getLastModified();
-			}
+	Match[] matchList = Deserializer.toMatchArray(resp.getJson());
+
+	while(true){
+		resp = tba.dataRequest.getDataTBA("/event/2017njfla/matches", lastModified);
+
+		if(resp.getResponseCode()!=304){ // HTTP code 304 indicates no change
+			teamList = Deserializer.jsonToTeamArray(resp.getJson());
+			lastModified = resp.getLastModified();
 		}
+	}
 
 ## Models
 
-Most of the object models follow those on The Blue Alliance API documentation, with appropriately named getter methods:
-
-**Award**
-
- * `String getName()`: The name of the award as provided by FIRST. May vary for the same award type.
- * `int getAwardType()`: Type of award given. See [here](https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6) for details.
- * `String getEventKey()`: The `event_key` of the event the award was won at.
- * `AwardRecipient[] getRecipientList()`: A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.
- * `int getYear()`: The year this award was won.
+A list of object model classes and their getter methods for instance varaibles can be found [here](/docs/com/thebluealliance/api/v3/models/package-summary.html)
 
 ## Contact
 
