@@ -21,7 +21,7 @@ Here is an example of retrieving an array of teams in the FIRST Mid-Atlantic dis
 
     Team[] midAtlanticTeams = tba.districtRequest.getTeams("2017mar");
 
-A list of request methods for each request object can be found [here](/docs/com/thebluealliance/api/v3/requests/package-summary.html).
+A list of request methods for each request object can be found [here](http://spencerng.github.io/TBA-API-Java-Library/com/thebluealliance/api/v3/requests/package-summary.html).
 
 ### Advance Usage
 
@@ -46,7 +46,7 @@ Here is an example of continuously fetching the `Match` objects for the 2017 Mou
 
 ## Models
 
-A list of object model classes and their getter methods for instance varaibles can be found [here](/docs/com/thebluealliance/api/v3/models/package-summary.html)
+A list of object model classes and their getter methods for instance variables can be found [here](http://spencerng.github.io/TBA-API-Java-Library/com/thebluealliance/api/v3/models/package-summary.html)
 
 ## Contact
 
