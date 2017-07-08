@@ -16,6 +16,28 @@ public class EventRequest {
 		this.tba = tba;
 	}
 	
+	/** Makes API requests with the subdirectory <code>/event/{eventKey}</code>
+	 * 
+	 * @param eventKey TBA Event Key, e.g. <code>2016nytr</code>
+	 * @return The {@link Event} object referenced by the given key
+	 */
+	public Event getEvent(String eventKey){
+		String directory = "/event/" + eventKey;
+		return Deserializer.toEvent(tba
+				.getDataTBA(directory).getJson());
+	}
+	
+	/** Makes API requests with the subdirectory <code>/event/{eventKey}/simple</code>
+	 * 
+	 * @param eventKey TBA Event Key, e.g. <code>2016nytr</code>
+	 * @return The {@link SimpleEvent} object referenced by the given key
+	 */
+	public SimpleEvent getSimpleEvent(String eventKey){
+		String directory = "/event/" + eventKey;
+		return Deserializer.toSimpleEvent(tba
+				.getDataTBA(directory).getJson());
+	}
+	
 	/** Makes API requests with the subdirectory <code>/event/{eventKey}/teams</code>
 	 * 
 	 * @param eventKey TBA Event Key, e.g. <code>2016nytr</code>

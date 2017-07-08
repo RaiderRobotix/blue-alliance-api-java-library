@@ -209,5 +209,23 @@ public class Deserializer {
 		SimpleMatch match = gson.fromJson(jsonData, SimpleMatch.class);
 		return match;
 	}
+	
+	/** Converts JSON to an {@link Event} object
+	 * @param jsonData JSON object from an {@link APIResponse}
+	 * @return {@link Event} object represented by <code>jsonData</code>
+	 */
+	public static Event toEvent(String jsonData){
+		Event event = gson.fromJson(jsonData, Event.class);
+		return event;
+	}
+	
+	/** Converts JSON to a {@link SimpleEvent} object
+	 * @param jsonData JSON object from an {@link APIResponse}
+	 * @return {@link SimpleEvent} object represented by <code>jsonData</code>
+	 */
+	public static SimpleEvent toSimpleEvent(String jsonData){
+		SimpleEvent event = gson.fromJson(jsonData, SimpleEvent.class);
+		return event;
+	}
 
 }
