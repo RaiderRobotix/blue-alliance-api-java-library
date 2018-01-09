@@ -33,7 +33,7 @@ public class EventRequest {
 	 * @return The {@link SimpleEvent} object referenced by the given key
 	 */
 	public SimpleEvent getSimpleEvent(String eventKey){
-		String directory = "/event/" + eventKey;
+		String directory = "/event/" + eventKey + "/simple";
 		return Deserializer.toSimpleEvent(tba
 				.getDataTBA(directory).getJson());
 	}
@@ -80,7 +80,7 @@ public class EventRequest {
 	 */
 	
 	public Event[] getEvents(int year){
-		String directory = "/event/" +year;
+		String directory = "/events/" +year;
 		return Deserializer.toEventArray(tba
 				.getDataTBA(directory).getJson());
 	}
@@ -91,7 +91,7 @@ public class EventRequest {
 	 * @return A list of {@link SimpleEvent} objects that occurred in a given year
 	 */
 	public SimpleEvent[] getSimpleEvents(int year){
-		String directory = "/event/" +year+"/simple";
+		String directory = "/events/" +year+"/simple";
 		return Deserializer.toSimpleEventArray(tba
 				.getDataTBA(directory).getJson());
 	}
