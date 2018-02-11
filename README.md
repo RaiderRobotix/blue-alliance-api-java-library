@@ -63,4 +63,4 @@ Note that you will need Gradle to compile this repository's source code if you d
 
 ## Contact
 
-Feel free to contact me at sng1488@gmail.com or create a pull request if you have any questions, fixes, or suggestions.
+Feel free to contact me at sng1488@gmail.com or create a pull request if you have any questions, fixes, or suggestions. 
