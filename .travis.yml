@@ -1,5 +1,11 @@
-before_script:
- - chmod +x gradlew
 language: java
 jdk:
   - oraclejdk8
+  - openjdk8
+ 
+before_install:
+ - chmod +x gradlew
+
+env:
+  global:
+    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
