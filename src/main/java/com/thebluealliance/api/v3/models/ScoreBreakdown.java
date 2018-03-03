@@ -1,4 +1,4 @@
-package com.thebluealliance.models;
+package com.thebluealliance.api.v3.models;
 
 public class ScoreBreakdown {
 
