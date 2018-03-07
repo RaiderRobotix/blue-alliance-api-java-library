@@ -56,18 +56,14 @@ public class DataRequest {
      * @param urlDirectory URL subdirectory for the query (e.g. <code>/team/frc25</code>)
      * @return An {@link APIResponse} object with the API's response
      */
-    public APIResponse getDataTBA(String urlDirectory){
-       
-			try {
+    public APIResponse getDataTBA(String urlDirectory) throws IOException{
+
 				URL url;
 				url = new URL(Constants.TBA_BASE_URL+urlDirectory);
 				HttpURLConnection con = (HttpURLConnection) url.openConnection();
 	            con.addRequestProperty(Constants.HEADER_AUTH, AUTH_KEY);
 	            return getData(con);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			return null;
+
     }
     
     /** Retrieves data from TBA API using a URL and a <code>If-Modified-Since</code> header
@@ -75,17 +71,13 @@ public class DataRequest {
      * @param ifModifiedSince Value of the <code>Last-Modified</code> header in the most recently cached response by the client.
      * @return An {@link APIResponse} object with the API's response
      */
-    public APIResponse getDataTBA(String urlDirectory, String ifModifiedSince){
-        try{
+    public APIResponse getDataTBA(String urlDirectory, String ifModifiedSince) throws IOException{
             URL url = new URL(Constants.TBA_BASE_URL+urlDirectory);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.addRequestProperty(Constants.HEADER_AUTH, AUTH_KEY);
             con.addRequestProperty(Constants.HEADER_MODIFIED, ifModifiedSince);
             return getData(con);
-        }catch(Exception e){
-        	
-        }
-        return null;
+
         
     }
     

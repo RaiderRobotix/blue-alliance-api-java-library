@@ -1,5 +1,7 @@
 package com.thebluealliance.api.v3.requests;
 
+import java.io.IOException;
+
 import com.thebluealliance.api.v3.Deserializer;
 import com.thebluealliance.api.v3.models.*;
 
@@ -20,8 +22,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of {@link Team} objects in the given district
+	 * @throws IOException 
 	 */
-	public Team[] getTeams(String districtKey){
+	public Team[] getTeams(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey+"/teams";
 		return Deserializer.toTeamArray(tba
 				.getDataTBA(directory).getJson());
@@ -31,8 +34,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of {@link SimpleTeam} objects in the given district
+	 * @throws IOException 
 	 */
-	public SimpleTeam[] getSimpleTeams(String districtKey){
+	public SimpleTeam[] getSimpleTeams(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey+"/teams/simple";
 		return Deserializer.toSimpleTeamArray(tba
 				.getDataTBA(directory).getJson());
@@ -42,8 +46,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of team keys in the given district
+	 * @throws IOException 
 	 */
-	public String[] getTeamKeys(String districtKey){
+	public String[] getTeamKeys(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey+"/teams/keys";
 		return Deserializer.toStringArray(tba
 				.getDataTBA(directory).getJson());
@@ -53,8 +58,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of team {@link DistrictRanking}s for the given district
+	 * @throws IOException 
 	 */
-	public DistrictRanking[] getRankings(String districtKey){
+	public DistrictRanking[] getRankings(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey+"/rankings";
 		return Deserializer.toDistrictRankingArray(tba
 				.getDataTBA(directory).getJson());
@@ -64,8 +70,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of events in the given district
+	 * @throws IOException 
 	 */
-	public Event[] getEvents(String districtKey){
+	public Event[] getEvents(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey + "/events";
 		return Deserializer.toEventArray(tba
 				.getDataTBA(directory)
@@ -76,8 +83,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A short-form list of events in the given district
+	 * @throws IOException 
 	 */
-	public SimpleEvent[] getSimpleEvents(String districtKey){
+	public SimpleEvent[] getSimpleEvents(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey + "/events/simple";
 		return Deserializer.toSimpleEventArray(tba
 				.getDataTBA(directory)
@@ -88,8 +96,9 @@ public class DistrictRequest {
 	 * 
 	 * @param districtKey TBA District Key, e.g. <code>2016fim</code>
 	 * @return A list of event keys in the given district
+	 * @throws IOException 
 	 */
-	public String[] getEventKeys(String districtKey){
+	public String[] getEventKeys(String districtKey) throws IOException{
 		String directory = "/district/" + districtKey + "/events/keys";
 		return Deserializer.toStringArray(tba
 				.getDataTBA(directory)
