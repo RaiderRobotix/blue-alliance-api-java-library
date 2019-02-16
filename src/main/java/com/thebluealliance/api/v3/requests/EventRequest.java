@@ -1,15 +1,15 @@
 package com.thebluealliance.api.v3.requests;
 
-import java.io.IOException;
-
 import com.thebluealliance.api.v3.Deserializer;
 import com.thebluealliance.api.v3.models.*;
+
+import java.io.IOException;
 
 /** Makes requests with event-specific information
  */
 public class EventRequest {
 
-	DataRequest tba;
+    private DataRequest tba;
 	
 	/** Creates an EventRequest object
 	 * @param tba A {@link DataRequest} object with the appropriate auth key

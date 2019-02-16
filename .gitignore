@@ -60,3 +60,5 @@ local.properties
 
 # End of https://www.gitignore.io/api/eclipse
 /.gradle/
+*.lock
+*.bin

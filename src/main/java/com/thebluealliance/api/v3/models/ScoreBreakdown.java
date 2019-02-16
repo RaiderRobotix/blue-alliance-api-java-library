@@ -2,7 +2,8 @@ package com.thebluealliance.api.v3.models;
 
 public class ScoreBreakdown {
 
-	MatchScoreBreakdown2018Alliance blue, red;
+	private MatchScoreBreakdown2018Alliance blue;
+	private MatchScoreBreakdown2018Alliance red;
 
 	public MatchScoreBreakdown2018Alliance getBlue() {
 		return blue;

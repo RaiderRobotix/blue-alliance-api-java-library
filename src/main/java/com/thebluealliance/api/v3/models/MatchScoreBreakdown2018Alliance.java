@@ -2,12 +2,33 @@ package com.thebluealliance.api.v3.models;
 
 public class MatchScoreBreakdown2018Alliance {
 
-	int adjustPoints, autoOwnershipPoints, autoPoints, foulCount, foulPoints, rp, 
-	techFoulCount, teleopOwnershipPoints, teleopPoints, teleopScaleBoostSec, teleopScaleForceSec, 
-	teleopScaleOwnershipSec, teleopSwitchBoostSec, teleopSwitchForceSec, teleopSwitchOwnershipSec, 
-	totalPoints, vaultBoostPlayed, vaultBoostTotal, vaultForcePlayed, vaultForceTotal, 
-	vaultLevitatePlayed, vaultLevitateTotal, vaultPoints, autoSwitchOwnershipSec, 
-	endgamePoints, autoRunPoints, autoScaleOwnershipSec;
+	private int adjustPoints;
+	private int autoOwnershipPoints;
+	private int autoPoints;
+	private int foulCount;
+	private int foulPoints;
+	private int rp;
+	private int techFoulCount;
+	private int teleopOwnershipPoints;
+	private int teleopPoints;
+	private int teleopScaleBoostSec;
+	private int teleopScaleForceSec;
+	private int teleopScaleOwnershipSec;
+	private int teleopSwitchBoostSec;
+	private int teleopSwitchForceSec;
+	private int teleopSwitchOwnershipSec;
+	private int totalPoints;
+	private int vaultBoostPlayed;
+	private int vaultBoostTotal;
+	private int vaultForcePlayed;
+	private int vaultForceTotal;
+	private int vaultLevitatePlayed;
+	private int vaultLevitateTotal;
+	private int vaultPoints;
+	private int autoSwitchOwnershipSec;
+	private int endgamePoints;
+	private int autoRunPoints;
+	private int autoScaleOwnershipSec;
 	
 	public int getAdjustPoints() {
 		return adjustPoints;
@@ -157,8 +178,16 @@ public class MatchScoreBreakdown2018Alliance {
 		return tba_gameData;
 	}
 
-	boolean autoQuestRankingPoints, autoSwitchAtZero, faceTheBossRankingPoint;
-	
-	String autoRobot1, autoRobot2, autoRobot3, endgameRobot1, endgameRobot2, endgameRobot3, tba_gameData;
+	private boolean autoQuestRankingPoints;
+	private boolean autoSwitchAtZero;
+	private boolean faceTheBossRankingPoint;
+
+	private String autoRobot1;
+	private String autoRobot2;
+	private String autoRobot3;
+	private String endgameRobot1;
+	private String endgameRobot2;
+	private String endgameRobot3;
+	private String tba_gameData;
 
 }

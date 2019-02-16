@@ -8,8 +8,8 @@ import com.thebluealliance.api.v3.requests.APIResponse;
  *
  */
 public class Deserializer {
-	
-	final static Gson gson = new Gson();
+
+	private final static Gson gson = new Gson();
 	
 	/** Converts JSON to a {@link Team} object
 	 * @param jsonData JSON object from an {@link APIResponse}
