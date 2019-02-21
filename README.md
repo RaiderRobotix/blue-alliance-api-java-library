@@ -1,4 +1,4 @@
-# The Blue Alliance API Java Library [![Build Status]https://travis-ci.org/RaiderRobotix/blue-alliance-api-java-library.svg?branch=master
+# The Blue Alliance API Java Library [![Build Status](https://travis-ci.org/RaiderRobotix/blue-alliance-api-java-library.svg?branch=master)](https://travis-ci.org/RaiderRobotix/blue-alliance-api-java-library)
 
 Java client library to retrieve data from The Blue Alliance using TBA API v3
 
