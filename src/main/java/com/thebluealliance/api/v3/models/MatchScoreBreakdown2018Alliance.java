@@ -2,192 +2,190 @@ package com.thebluealliance.api.v3.models;
 
 public class MatchScoreBreakdown2018Alliance {
 
-	private int adjustPoints;
-	private int autoOwnershipPoints;
-	private int autoPoints;
-	private int foulCount;
-	private int foulPoints;
-	private int rp;
-	private int techFoulCount;
-	private int teleopOwnershipPoints;
-	private int teleopPoints;
-	private int teleopScaleBoostSec;
-	private int teleopScaleForceSec;
-	private int teleopScaleOwnershipSec;
-	private int teleopSwitchBoostSec;
-	private int teleopSwitchForceSec;
-	private int teleopSwitchOwnershipSec;
-	private int totalPoints;
-	private int vaultBoostPlayed;
-	private int vaultBoostTotal;
-	private int vaultForcePlayed;
-	private int vaultForceTotal;
-	private int vaultLevitatePlayed;
-	private int vaultLevitateTotal;
-	private int vaultPoints;
-	private int autoSwitchOwnershipSec;
-	private int endgamePoints;
-	private int autoRunPoints;
-	private int autoScaleOwnershipSec;
-	
-	public int getAdjustPoints() {
-		return adjustPoints;
-	}
+    private int adjustPoints;
+    private int autoOwnershipPoints;
+    private int autoPoints;
+    private int foulCount;
+    private int foulPoints;
+    private int rp;
+    private int techFoulCount;
+    private int teleopOwnershipPoints;
+    private int teleopPoints;
+    private int teleopScaleBoostSec;
+    private int teleopScaleForceSec;
+    private int teleopScaleOwnershipSec;
+    private int teleopSwitchBoostSec;
+    private int teleopSwitchForceSec;
+    private int teleopSwitchOwnershipSec;
+    private int totalPoints;
+    private int vaultBoostPlayed;
+    private int vaultBoostTotal;
+    private int vaultForcePlayed;
+    private int vaultForceTotal;
+    private int vaultLevitatePlayed;
+    private int vaultLevitateTotal;
+    private int vaultPoints;
+    private int autoSwitchOwnershipSec;
+    private int endgamePoints;
+    private int autoRunPoints;
+    private int autoScaleOwnershipSec;
+    private boolean autoQuestRankingPoints;
+    private boolean autoSwitchAtZero;
+    private boolean faceTheBossRankingPoint;
+    private String autoRobot1;
+    private String autoRobot2;
+    private String autoRobot3;
+    private String endgameRobot1;
+    private String endgameRobot2;
+    private String endgameRobot3;
+    private String tba_gameData;
 
-	public int getAutoOwnershipPoints() {
-		return autoOwnershipPoints;
-	}
+    public int getAdjustPoints() {
+        return adjustPoints;
+    }
 
-	public int getAutoPoints() {
-		return autoPoints;
-	}
+    public int getAutoOwnershipPoints() {
+        return autoOwnershipPoints;
+    }
 
-	public int getFoulCount() {
-		return foulCount;
-	}
+    public int getAutoPoints() {
+        return autoPoints;
+    }
 
-	public int getFoulPoints() {
-		return foulPoints;
-	}
+    public int getFoulCount() {
+        return foulCount;
+    }
 
-	public int getRp() {
-		return rp;
-	}
+    public int getFoulPoints() {
+        return foulPoints;
+    }
 
-	public int getTechFoulCount() {
-		return techFoulCount;
-	}
+    public int getRp() {
+        return rp;
+    }
 
-	public int getTeleopOwnershipPoints() {
-		return teleopOwnershipPoints;
-	}
+    public int getTechFoulCount() {
+        return techFoulCount;
+    }
 
-	public int getTeleopPoints() {
-		return teleopPoints;
-	}
+    public int getTeleopOwnershipPoints() {
+        return teleopOwnershipPoints;
+    }
 
-	public int getTeleopScaleBoostSec() {
-		return teleopScaleBoostSec;
-	}
+    public int getTeleopPoints() {
+        return teleopPoints;
+    }
 
-	public int getTeleopScaleForceSec() {
-		return teleopScaleForceSec;
-	}
+    public int getTeleopScaleBoostSec() {
+        return teleopScaleBoostSec;
+    }
 
-	public int getTeleopScaleOwnershipSec() {
-		return teleopScaleOwnershipSec;
-	}
+    public int getTeleopScaleForceSec() {
+        return teleopScaleForceSec;
+    }
 
-	public int getTeleopSwitchBoostSec() {
-		return teleopSwitchBoostSec;
-	}
+    public int getTeleopScaleOwnershipSec() {
+        return teleopScaleOwnershipSec;
+    }
 
-	public int getTeleopSwitchForceSec() {
-		return teleopSwitchForceSec;
-	}
+    public int getTeleopSwitchBoostSec() {
+        return teleopSwitchBoostSec;
+    }
 
-	public int getTeleopSwitchOwnershipSec() {
-		return teleopSwitchOwnershipSec;
-	}
+    public int getTeleopSwitchForceSec() {
+        return teleopSwitchForceSec;
+    }
 
-	public int getTotalPoints() {
-		return totalPoints;
-	}
+    public int getTeleopSwitchOwnershipSec() {
+        return teleopSwitchOwnershipSec;
+    }
 
-	public int getVaultBoostPlayed() {
-		return vaultBoostPlayed;
-	}
+    public int getTotalPoints() {
+        return totalPoints;
+    }
 
-	public int getVaultBoostTotal() {
-		return vaultBoostTotal;
-	}
+    public int getVaultBoostPlayed() {
+        return vaultBoostPlayed;
+    }
 
-	public int getVaultForcePlayed() {
-		return vaultForcePlayed;
-	}
+    public int getVaultBoostTotal() {
+        return vaultBoostTotal;
+    }
 
-	public int getVaultForceTotal() {
-		return vaultForceTotal;
-	}
+    public int getVaultForcePlayed() {
+        return vaultForcePlayed;
+    }
 
-	public int getVaultLevitatePlayed() {
-		return vaultLevitatePlayed;
-	}
+    public int getVaultForceTotal() {
+        return vaultForceTotal;
+    }
 
-	public int getVaultLevitateTotal() {
-		return vaultLevitateTotal;
-	}
+    public int getVaultLevitatePlayed() {
+        return vaultLevitatePlayed;
+    }
 
-	public int getVaultPoints() {
-		return vaultPoints;
-	}
+    public int getVaultLevitateTotal() {
+        return vaultLevitateTotal;
+    }
 
-	public int getAutoSwitchOwnershipSec() {
-		return autoSwitchOwnershipSec;
-	}
+    public int getVaultPoints() {
+        return vaultPoints;
+    }
 
-	public int getEndgamePoints() {
-		return endgamePoints;
-	}
+    public int getAutoSwitchOwnershipSec() {
+        return autoSwitchOwnershipSec;
+    }
 
-	public int getAutoRunPoints() {
-		return autoRunPoints;
-	}
+    public int getEndgamePoints() {
+        return endgamePoints;
+    }
 
-	public int getAutoScaleOwnershipSec() {
-		return autoScaleOwnershipSec;
-	}
+    public int getAutoRunPoints() {
+        return autoRunPoints;
+    }
 
-	public boolean isAutoQuestRankingPoints() {
-		return autoQuestRankingPoints;
-	}
+    public int getAutoScaleOwnershipSec() {
+        return autoScaleOwnershipSec;
+    }
 
-	public boolean isAutoSwitchAtZero() {
-		return autoSwitchAtZero;
-	}
+    public boolean isAutoQuestRankingPoints() {
+        return autoQuestRankingPoints;
+    }
 
-	public boolean isFaceTheBossRankingPoint() {
-		return faceTheBossRankingPoint;
-	}
+    public boolean isAutoSwitchAtZero() {
+        return autoSwitchAtZero;
+    }
 
-	public String getAutoRobot1() {
-		return autoRobot1;
-	}
+    public boolean isFaceTheBossRankingPoint() {
+        return faceTheBossRankingPoint;
+    }
 
-	public String getAutoRobot2() {
-		return autoRobot2;
-	}
+    public String getAutoRobot1() {
+        return autoRobot1;
+    }
 
-	public String getAutoRobot3() {
-		return autoRobot3;
-	}
+    public String getAutoRobot2() {
+        return autoRobot2;
+    }
 
-	public String getEndgameRobot1() {
-		return endgameRobot1;
-	}
+    public String getAutoRobot3() {
+        return autoRobot3;
+    }
 
-	public String getEndgameRobot2() {
-		return endgameRobot2;
-	}
+    public String getEndgameRobot1() {
+        return endgameRobot1;
+    }
 
-	public String getEndgameRobot3() {
-		return endgameRobot3;
-	}
+    public String getEndgameRobot2() {
+        return endgameRobot2;
+    }
 
-	public String getTba_gameData() {
-		return tba_gameData;
-	}
+    public String getEndgameRobot3() {
+        return endgameRobot3;
+    }
 
-	private boolean autoQuestRankingPoints;
-	private boolean autoSwitchAtZero;
-	private boolean faceTheBossRankingPoint;
-
-	private String autoRobot1;
-	private String autoRobot2;
-	private String autoRobot3;
-	private String endgameRobot1;
-	private String endgameRobot2;
-	private String endgameRobot3;
-	private String tba_gameData;
+    public String getTba_gameData() {
+        return tba_gameData;
+    }
 
 }
