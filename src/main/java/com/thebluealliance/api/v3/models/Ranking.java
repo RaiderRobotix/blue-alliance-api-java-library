@@ -1,14 +1,13 @@
 package com.thebluealliance.api.v3.models;
 
-import java.util.HashMap;
-
 /**
  * Represents the ranking of a team at an event
  */
 public class Ranking {
     private int dq, matches_played, qual_average, rank;
-    private HashMap<String, WLTRecord> record;
+    private WLTRecord record;
     private String team_key;
+    private double[] sort_orders;
 
     /**
      * @return Number of times disqualified
@@ -40,17 +39,10 @@ public class Ranking {
     }
 
     /**
-     * @return Win-Loss-Tie record information for qualification matches, if available. May be null
+     * @return Win-Loss-Tie object model for all matches
      */
-    public WLTRecord getQualificationsRecord() {
-        return record.get("qualifications");
-    }
-
-    /**
-     * @return Win-Loss-Tie record information for the event, if available. May be null
-     */
-    public WLTRecord getOverallRecord() {
-        return record.get("overall");
+    public WLTRecord getRecord() {
+        return record;
     }
 
     /**
@@ -58,6 +50,13 @@ public class Ranking {
      */
     public String getTeamKey() {
         return team_key;
+    }
+
+    /**
+     * @return Sorting criteria values for the current season
+     */
+    public double[] getSortOrders() {
+        return sort_orders;
     }
 
 
