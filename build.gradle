@@ -1,6 +1,6 @@
 plugins {
-	'java'
-	'java-library'
+	id 'java'
+	id 'java-library'
 }
 
 repositories {
