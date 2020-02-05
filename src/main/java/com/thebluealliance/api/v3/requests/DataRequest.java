@@ -1,7 +1,5 @@
 package com.thebluealliance.api.v3.requests;
 
-import com.thebluealliance.api.v3.Constants;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,6 +10,10 @@ import java.net.URL;
  * Used to issue a direct request for data to The Blue Alliance via a URL
  */
 public class DataRequest {
+
+	public static final String TBA_BASE_URL = "https://www.thebluealliance.com/api/v3";
+	public static final String HEADER_AUTH = "X-TBA-Auth-Key";
+    public static final String HEADER_MODIFIED = "If-Modified-Since";
 
     private String AUTH_KEY;
 
@@ -34,9 +36,9 @@ public class DataRequest {
     public APIResponse getDataTBA(String urlDirectory) throws IOException {
 
         URL url;
-        url = new URL(Constants.TBA_BASE_URL + urlDirectory);
+        url = new URL(TBA_BASE_URL + urlDirectory);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.addRequestProperty(Constants.HEADER_AUTH, AUTH_KEY);
+        con.addRequestProperty(HEADER_AUTH, AUTH_KEY);
         return getData(con);
 
     }
@@ -80,10 +82,10 @@ public class DataRequest {
      * @return An {@link APIResponse} object with the API's response
      */
     public APIResponse getDataTBA(String urlDirectory, String ifModifiedSince) throws IOException {
-        URL url = new URL(Constants.TBA_BASE_URL + urlDirectory);
+        URL url = new URL(TBA_BASE_URL + urlDirectory);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.addRequestProperty(Constants.HEADER_AUTH, AUTH_KEY);
-        con.addRequestProperty(Constants.HEADER_MODIFIED, ifModifiedSince);
+        con.addRequestProperty(HEADER_AUTH, AUTH_KEY);
+        con.addRequestProperty(HEADER_MODIFIED, ifModifiedSince);
         return getData(con);
 
 

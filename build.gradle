@@ -1,5 +1,7 @@
-apply plugin: 'java'
-
+plugins {
+	'java'
+	'java-library'
+}
 
 repositories {
     jcenter()
@@ -7,10 +9,7 @@ repositories {
 
 
 dependencies {
-
-    compile 'org.slf4j:slf4j-api:1.7.21'
-
-
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.code.gson:gson:2.2.4'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    testImplementation 'junit:junit:4.13'
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
