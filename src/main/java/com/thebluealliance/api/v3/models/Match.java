@@ -1,22 +1,13 @@
 package com.thebluealliance.api.v3.models;
 
-public class Match extends SimpleMatch {
+import lombok.EqualsAndHashCode;
+import lombok.Value;
 
-    private long post_result_time;
-    private ScoreBreakdown score_breakdown;
-    private Media[] videos;
+@EqualsAndHashCode(callSuper = true)
+@Value public class Match extends SimpleMatch {
 
-    public long getPostResultTime() {
-        return post_result_time;
-    }
-
-    public ScoreBreakdown getScoreBreakdown() {
-        return score_breakdown;
-    }
-
-    public Media[] getVideos() {
-        return videos;
-    }
-
+     long post_result_time;
+     ScoreBreakdown score_breakdown;
+     Media[] videos;
 
 }

@@ -5,7 +5,8 @@ package com.thebluealliance.api.v3.requests;
  */
 public class APIResponse {
 
-    private final String jsonContent, lastModified;
+    private final String jsonContent;
+	private final String lastModified;
     private final int responseCode;
 
     /**

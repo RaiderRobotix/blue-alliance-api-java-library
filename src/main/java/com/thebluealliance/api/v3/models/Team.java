@@ -2,43 +2,38 @@ package com.thebluealliance.api.v3.models;
 
 import java.util.HashMap;
 
+import lombok.EqualsAndHashCode;
+import lombok.Value;
+
 /**
  * Represents a FIRST Robotics Competition team
  */
-public class Team extends SimpleTeam {
-
-    private String postal_code, website, motto;
-    private int rookie_year;
-
-    private HashMap<String, String> home_championship;
-
-    /**
-     * @return Postal code from the team address.
-     */
-    public String getPostalCode() {
-        return postal_code;
-    }
+@EqualsAndHashCode(callSuper = true)
+@Value public class Team extends SimpleTeam {
+	
+	Team() throws IllegalAccessException {
+		super(null, null, null, null, null, null);
+		throw new IllegalAccessException("You've called the constructor of Team");
+	}
 
     /**
-     * @return Official website associated with the team.
-     */
-    public String getWebsite() {
-        return website;
-    }
-
+	* @return Postal code from the team address.
+	*/
+	String postal_code;
+	/**
+	* @return Official website associated with the team.
+	*/
+	String website;
+	/**
+	* @return Team�s motto as provided by FIRST.
+	*/
+	String motto;
     /**
-     * @return Team�s motto as provided by FIRST.
-     */
-    public String getMotto() {
-        return motto;
-    }
+	* @return First year the team officially competed.
+	*/
+	int rookie_year;
 
-    /**
-     * @return First year the team officially competed.
-     */
-    public int getRookieYear() {
-        return rookie_year;
-    }
+     HashMap<String, String> home_championship;
 
     /**
      * @param year An year to query. Must be greater than or equal to 2017.
