@@ -46,9 +46,9 @@ public class SimpleMatch {
 	 */
 	long actual_time;
 	HashMap<String, Alliance> alliances;
-	Alliance blueAlliance = alliances.get("blue");
+	transient Alliance blueAlliance = alliances.get("blue");
 
-	Alliance redAlliance = alliances.get("red");
+	transient Alliance redAlliance = alliances.get("red");
 
 	/**
 	 * Represents an alliance during a match
