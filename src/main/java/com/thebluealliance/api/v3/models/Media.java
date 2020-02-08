@@ -5,26 +5,24 @@ import lombok.Value;
 /**
  * A reference for most any media associated with a team or event on TBA.
  */
-@Value public class Media {
+@Value
+public class Media {
 
 	/**
-	* @return TBA identifier for this media.
-	*/
+	 * @return TBA identifier for this media.
+	 */
 	String key;
 	/**
-	* @return String type of the media element.
-	* Value is in <code>[ youtube, cdphotothread, imgur, facebook-profile, youtube-channel, twitter-profile,
-	* github-profile, instagram-profile, periscope-profile, grabcad, pinterest-profile, snapchat-profile,
-	* twitch-channel ]</code>
-	*/
+	 * @return String type of the media element. Value is in <code>[ youtube, cdphotothread, imgur, facebook-profile, youtube-channel, twitter-profile, github-profile, instagram-profile, periscope-profile, grabcad, pinterest-profile, snapchat-profile,twitch-channel ]</code>
+	 */
 	String type;
 	/**
-	* @return The key used to identify this media on the media site.
-	*/
+	 * @return The key used to identify this media on the media site.
+	 */
 	String foreign_key;
 	/**
-	* @return <code>true</code> if the media is of high quality.
-	*/
+	 * @return <code>true</code> if the media is of high quality.
+	 */
 	boolean preferred;
 
 }

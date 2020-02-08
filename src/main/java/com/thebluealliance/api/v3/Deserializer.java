@@ -5,8 +5,7 @@ import com.thebluealliance.api.v3.models.*;
 import com.thebluealliance.api.v3.requests.APIResponse;
 
 /**
- * Collection of <code>static</code> methods to convert JSON data from the API into a model or an array of a model
- * found in {@linkplain com.thebluealliance.api.v3.models}
+ * Collection of <code>static</code> methods to convert JSON data from the API into a model or an array of a model found in {@linkplain com.thebluealliance.api.v3.models}
  */
 public class Deserializer {
 

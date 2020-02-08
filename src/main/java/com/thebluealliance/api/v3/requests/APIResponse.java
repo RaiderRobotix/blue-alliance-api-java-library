@@ -5,7 +5,8 @@ import lombok.Value;
 /**
  * A response from The Blue Alliance API com.thebluealliance.api.v3
  */
-@Value public class APIResponse {
+@Value
+public class APIResponse {
 
 	/**
 	 * @return The JSON string returned by the API. May be null if the <code>
