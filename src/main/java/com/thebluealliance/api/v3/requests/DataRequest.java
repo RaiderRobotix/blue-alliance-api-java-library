@@ -6,25 +6,19 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import lombok.Value;
+
 /**
  * Used to issue a direct request for data to The Blue Alliance via a URL
  */
+@Value
 public class DataRequest {
 
 	public static final String TBA_BASE_URL = "https://www.thebluealliance.com/api/v3";
 	public static final String HEADER_AUTH = "X-TBA-Auth-Key";
 	public static final String HEADER_MODIFIED = "If-Modified-Since";
 
-	private String AUTH_KEY;
-
-	/**
-	 * Constructs an object to make a data request
-	 *
-	 * @param authKey TBA API com.thebluealliance.api.v3 authentication key
-	 */
-	public DataRequest(String authKey) {
-		AUTH_KEY = authKey;
-	}
+	String AUTH_KEY;
 
 	/**
 	 * Retrieves data from TBA API using a URL, without a <code>If-Modified-Since</code> header
