@@ -24,7 +24,6 @@ public class DataRequest {
      */
     public DataRequest(String authKey) {
         AUTH_KEY = authKey;
-
     }
 
     /**
@@ -34,13 +33,11 @@ public class DataRequest {
      * @return An {@link APIResponse} object with the API's response
      */
     public APIResponse getDataTBA(String urlDirectory) throws IOException {
-
         URL url;
         url = new URL(TBA_BASE_URL + urlDirectory);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.addRequestProperty(HEADER_AUTH, AUTH_KEY);
         return getData(con);
-
     }
 
     private APIResponse getData(HttpURLConnection con) {
@@ -87,8 +84,6 @@ public class DataRequest {
         con.addRequestProperty(HEADER_AUTH, AUTH_KEY);
         con.addRequestProperty(HEADER_MODIFIED, ifModifiedSince);
         return getData(con);
-
-
     }
 
 
