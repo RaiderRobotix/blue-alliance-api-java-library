@@ -13,7 +13,7 @@ import lombok.Value;
 public class Team extends SimpleTeam {
 
 	Team() throws IllegalAccessException {
-		super(null, null, null, null, null, null);
+		super(null, null, null, null, null, null, 0);
 		throw new IllegalAccessException("You've called the constructor of Team");
 	}
 

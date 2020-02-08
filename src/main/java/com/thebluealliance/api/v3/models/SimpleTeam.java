@@ -37,4 +37,6 @@ public class SimpleTeam {
 	/**
 	 * @return Official team number issued by FIRST.
 	 */
+
+	int team_number;
 }
