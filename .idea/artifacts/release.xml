@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="release">
+    <output-path>$PROJECT_DIR$/out/artifacts/release</output-path>
+    <root id="archive" name="TBA-APIv3-Java-Library-X.X.jar">
+      <element id="module-output" name="TBA_Java_APIv3_main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
