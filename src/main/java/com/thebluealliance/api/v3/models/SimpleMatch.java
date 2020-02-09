@@ -49,11 +49,11 @@ public class SimpleMatch {
 	 */
 	long actual_time;
 	HashMap<String, Alliance> alliances;
-	 Alliance getBlueAlliance() {
+	public Alliance getBlueAlliance() {
 		return alliances.get("blue");
 	}
 
-	 Alliance getRedAlliance(){
+	 public Alliance getRedAlliance(){
 	 	return alliances.get("red");
 	 }
 
