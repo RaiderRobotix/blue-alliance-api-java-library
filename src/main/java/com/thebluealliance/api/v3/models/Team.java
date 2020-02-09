@@ -2,51 +2,46 @@ package com.thebluealliance.api.v3.models;
 
 import java.util.HashMap;
 
+import lombok.EqualsAndHashCode;
+import lombok.Value;
+
 /**
  * Represents a FIRST Robotics Competition team
  */
+@EqualsAndHashCode(callSuper = true)
+@Value
 public class Team extends SimpleTeam {
 
-    private String postal_code, website, motto;
-    private int rookie_year;
+	Team() throws IllegalAccessException {
+		super(null, null, null, null, null, null, 0);
+		throw new IllegalAccessException("You've called the constructor of Team");
+	}
 
-    private HashMap<String, String> home_championship;
+	/**
+	 * @return Postal code from the team address.
+	 */
+	String postal_code;
+	/**
+	 * @return Official website associated with the team.
+	 */
+	String website;
+	/**
+	 * @return Team's motto as provided by FIRST.
+	 */
+	String motto;
+	/**
+	 * @return First year the team officially competed.
+	 */
+	int rookie_year;
 
-    /**
-     * @return Postal code from the team address.
-     */
-    public String getPostalCode() {
-        return postal_code;
-    }
+	HashMap<String, String> home_championship;
 
-    /**
-     * @return Official website associated with the team.
-     */
-    public String getWebsite() {
-        return website;
-    }
-
-    /**
-     * @return Team�s motto as provided by FIRST.
-     */
-    public String getMotto() {
-        return motto;
-    }
-
-    /**
-     * @return First year the team officially competed.
-     */
-    public int getRookieYear() {
-        return rookie_year;
-    }
-
-    /**
-     * @param year An year to query. Must be greater than or equal to 2017.
-     * @return Location of the team�s home championship for the particular <code>year</code>
-     */
-    public String getHomeChampionship(int year) {
-        return home_championship.get(Integer.toString(year));
-    }
-
+	/**
+	 * @param year An year to query. Must be greater than or equal to 2017.
+	 * @return Location of the team�s home championship for the particular <code>year</code>
+	 */
+	public String getHomeChampionship(int year) {
+		return home_championship.get(Integer.toString(year));
+	}
 
 }

@@ -1,15 +1,10 @@
 package com.thebluealliance.api.v3.models;
 
+import lombok.Value;
+
+@Value
 public class ScoreBreakdown {
 
-    private MatchScoreBreakdown2019Allliance blue;
-    private MatchScoreBreakdown2019Allliance red;
-
-    public MatchScoreBreakdown2019Allliance getBlue() {
-        return blue;
-    }
-
-    public MatchScoreBreakdown2019Allliance getRed() {
-        return red;
-    }
+	MatchScoreBreakdown2019Allliance blue;
+	MatchScoreBreakdown2019Allliance red;
 }

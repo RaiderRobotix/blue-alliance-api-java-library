@@ -1,40 +1,28 @@
 package com.thebluealliance.api.v3.models;
 
+import lombok.Value;
+
 /**
  * Represents a particular robot in FIRST Robotics Competition
  */
+@Value
 public class Robot {
 
-    private String key, robot_name, team_key;
-    private int year;
-
-    /**
-     * @return Internal TBA identifier for this robot.
-     */
-    public String getKey() {
-        return key;
-    }
-
-    /**
-     * @return Name of the robot as provided by the team.
-     */
-    public String getRobotName() {
-        return robot_name;
-    }
-
-    /**
-     * @return TBA team key for this robot.
-     */
-    public String getTeamKey() {
-        return team_key;
-    }
-
-    /**
-     * @return Year this robot competed in.
-     */
-    public int getYear() {
-        return year;
-    }
-
+	/**
+	 * @return Internal TBA identifier for this robot.
+	 */
+	String key;
+	/**
+	 * @return Name of the robot as provided by the team.
+	 */
+	String robot_name;
+	/**
+	 * @return TBA team key for this robot.
+	 */
+	String team_key;
+	/**
+	 * @return Year this robot competed in.
+	 */
+	int year;
 
 }

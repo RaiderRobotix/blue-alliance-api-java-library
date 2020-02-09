@@ -1,29 +1,13 @@
 package com.thebluealliance.api.v3.models;
 
+import lombok.Value;
+
 /**
  * A Win-Loss-Tie record for a team, or an alliance.
  */
+@Value
 public class WLTRecord {
-    private int losses, wins, ties;
-
-    /**
-     * @return Number of losses
-     */
-    public int getLosses() {
-        return losses;
-    }
-
-    /**
-     * @return Number of wins
-     */
-    public int getWins() {
-        return wins;
-    }
-
-    /**
-     * @return Number of ties
-     */
-    public int getTies() {
-        return ties;
-    }
+	int losses;
+	int wins;
+	int ties;
 }

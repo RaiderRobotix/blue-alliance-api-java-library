@@ -1,48 +1,36 @@
 package com.thebluealliance.api.v3.models;
 
+import lombok.Value;
+
 /**
  * Rank of a {@link Team} in a district.
  */
+@Value
 public class DistrictRanking {
 
-    private String team_key;
-    private int rank, rookie_bonus, point_total;
-    private EventPoints[] event_points;
+	/**
+	 * @return TBA team key for the team.
+	 */
+	String team_key;
 
+	/**
+	 * @return Numerical rank of the team, 1 being top rank.
+	 */
+	int rank;
 
-    /**
-     * @return TBA team key for the team.
-     */
-    public String getTeamKey() {
-        return team_key;
-    }
+	/**
+	 * @return Any points added to a team as a result of the rookie bonus.
+	 */
+	int rookie_bonus;
 
-    /**
-     * @return Numerical rank of the team, 1 being top rank.
-     */
-    public int getRank() {
-        return rank;
-    }
+	/**
+	 * @return Total district points for the team.
+	 */
+	int point_total;
 
-    /**
-     * @return Any points added to a team as a result of the rookie bonus.
-     */
-    public int getRookieBonus() {
-        return rookie_bonus;
-    }
-
-    /**
-     * @return Total district points for the team.
-     */
-    public int getPointTotal() {
-        return point_total;
-    }
-
-    /**
-     * @return List of events and their associated points that contributed to the point total for the team.
-     */
-    public EventPoints[] getEventPoints() {
-        return event_points;
-    }
+	/**
+	 * @return List of events and their associated points that contributed to the point total for the team.
+	 */
+	EventPoints[] event_points;
 
 }
