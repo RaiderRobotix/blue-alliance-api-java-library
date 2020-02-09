@@ -3,11 +3,13 @@ package com.thebluealliance.api.v3.models;
 import java.util.HashMap;
 
 import lombok.Value;
+import lombok.experimental.NonFinal;
 
 /**
  * Shortform representation of a FIRST Robotics Competition match
  */
 @Value
+@NonFinal
 public class SimpleMatch {
 
 	/**
@@ -47,9 +49,13 @@ public class SimpleMatch {
 	 */
 	long actual_time;
 	HashMap<String, Alliance> alliances;
-	transient Alliance blueAlliance = alliances.get("blue");
+	 Alliance getBlueAlliance() {
+		return alliances.get("blue");
+	}
 
-	transient Alliance redAlliance = alliances.get("red");
+	 Alliance getRedAlliance(){
+	 	return alliances.get("red");
+	 }
 
 	/**
 	 * Represents an alliance during a match
