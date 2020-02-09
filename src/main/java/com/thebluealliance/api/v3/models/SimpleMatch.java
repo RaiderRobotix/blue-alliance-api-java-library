@@ -7,6 +7,7 @@ import lombok.Value;
 /**
  * Shortform representation of a FIRST Robotics Competition match
  */
+@Value
 public class SimpleMatch {
 
 	/**
