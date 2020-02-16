@@ -5,6 +5,6 @@ import lombok.Value;
 @Value
 public class ScoreBreakdown {
 
-	MatchScoreBreakdown2019Allliance blue;
-	MatchScoreBreakdown2019Allliance red;
+	MatchScoreBreakdown2020Alliance blue;
+	MatchScoreBreakdown2020Alliance red;
 }
