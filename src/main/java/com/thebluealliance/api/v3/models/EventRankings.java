@@ -5,6 +5,7 @@ import lombok.Value;
 /**
  * The event rankings and tiebreaker information for an event
  */
+@Value
 public class EventRankings {
 
 	/**
@@ -15,14 +16,6 @@ public class EventRankings {
 	 * @return List of year-specific values provided in the `sort_orders` array for each team.
 	 */
 	SortOrderInfo[] sort_order_info;
-
-	public Ranking[] getRankings() {
-		return rankings;
-	}
-
-	public SortOrderInfo[] getSortOrderInfo() {
-		return sort_order_info;
-	}
 
 	/**
 	 * The Sort order of the rankings for a particular year
