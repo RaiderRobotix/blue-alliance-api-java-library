@@ -79,21 +79,15 @@ public class TeamEventStatus {
 		 */
 		@Value
 		public class AllianceBackup {
-			String out, in;
-
 			/**
 			 * @return TBA key for the team replaced by the backup.
 			 */
-			public String getOut() {
-				return out;
-			}
+			String out;
 
 			/**
 			 * @return TBA key for the backup team called in.
 			 */
-			public String getIn() {
-				return in;
-			}
+			String in;
 
 		}
 
