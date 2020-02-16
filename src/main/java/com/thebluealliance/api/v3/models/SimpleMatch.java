@@ -48,14 +48,12 @@ public class SimpleMatch {
 	 * @return UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.
 	 */
 	long actual_time;
+	
 	HashMap<String, Alliance> alliances;
-	public Alliance getBlueAlliance() {
-		return alliances.get("blue");
-	}
 
-	 public Alliance getRedAlliance(){
-	 	return alliances.get("red");
-	 }
+	public Alliance getBlueAlliance() { return alliances.get("blue"); }
+
+	public Alliance getRedAlliance(){ return alliances.get("red"); }
 
 	/**
 	 * Represents an alliance during a match
