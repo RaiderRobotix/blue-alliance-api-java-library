@@ -9,11 +9,11 @@ import lombok.Value;
 public class EventRankings {
 
 	/**
-	 * @return List of rankings at the event
+	 * List of rankings at the event
 	 */
 	Ranking[] rankings;
 	/**
-	 * @return List of year-specific values provided in the `sort_orders` array for each team.
+	 * List of year-specific values provided in the `sort_orders` array for each team.
 	 */
 	SortOrderInfo[] sort_order_info;
 
@@ -24,11 +24,11 @@ public class EventRankings {
 	public class SortOrderInfo {
 
 		/**
-		 * @return Name of the field used in the <code>sort_order</code> array.
+		 * Name of the field used in the <code>sort_order</code> array.
 		 */
 		String name;
 		/**
-		 * @return Integer expressing the number of digits of precision in the number provided in sort_orders.
+		 * Integer expressing the number of digits of precision in the number provided in sort_orders.
 		 */
 		int precision;
 

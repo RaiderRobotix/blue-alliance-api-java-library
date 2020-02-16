@@ -18,27 +18,27 @@ public class Team extends SimpleTeam {
 	}
 
 	/**
-	 * @return Postal code from the team address.
+	 * Postal code from the team address.
 	 */
 	String postal_code;
 	/**
-	 * @return Official website associated with the team.
+	 * Official website associated with the team.
 	 */
 	String website;
 	/**
-	 * @return Team's motto as provided by FIRST.
+	 * Team's motto as provided by FIRST.
 	 */
 	String motto;
 	/**
-	 * @return First year the team officially competed.
+	 * First year the team officially competed.
 	 */
 	int rookie_year;
 
 	HashMap<String, String> home_championship;
 
 	/**
-	 * @param year An year to query. Must be greater than or equal to 2017.
-	 * @return Location of the team�s home championship for the particular <code>year</code>
+	 * @param year
+	 *                 An year to query. Must be greater than or equal to 2017. Location of the team�s home championship for the particular <code>year</code>
 	 */
 	public String getHomeChampionship(int year) {
 		return home_championship.get(Integer.toString(year));

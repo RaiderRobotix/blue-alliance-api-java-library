@@ -9,22 +9,22 @@ import lombok.Value;
 public class District {
 
 	/**
-	 * @return The short identifier for the district.
+	 * The short identifier for the district.
 	 */
 	String abbreviation;
 
 	/**
-	 * @return The long name for the district.
+	 * The long name for the district.
 	 */
 	String display_name;
 
 	/**
-	 * @return Key for this district, e.g. <code>2016ne</code>.
+	 * Key for this district, e.g. <code>2016ne</code>.
 	 */
 	String key;
 
 	/**
-	 * @return Year this district participated.
+	 * Year this district participated.
 	 */
 	int year;
 }

@@ -11,31 +11,31 @@ import lombok.experimental.NonFinal;
 public class SimpleTeam {
 
 	/**
-	 * @return TBA team key with the format <code>frcXXXX</code> with <code>XXXX</code> representing the team number.
+	 * TBA team key with the format <code>frcXXXX</code> with <code>XXXX</code> representing the team number.
 	 */
 	String key;
 	/**
-	 * @return Team nickname provided by FIRST.
+	 * Team nickname provided by FIRST.
 	 */
 	String nickname;
 	/**
-	 * @return Official long name registered with FIRST.
+	 * Official long name registered with FIRST.
 	 */
 	String name;
 	/**
-	 * @return City of team derived from parsing the address registered with FIRST.
+	 * City of team derived from parsing the address registered with FIRST.
 	 */
 	String city;
 	/**
-	 * @return State of team derived from parsing the address registered with FIRST.
+	 * State of team derived from parsing the address registered with FIRST.
 	 */
 	String state_prov;
 	/**
-	 * @return Country of team derived from parsing the address registered with FIRST.
+	 * Country of team derived from parsing the address registered with FIRST.
 	 */
 	String country;
 	/**
-	 * @return Official team number issued by FIRST.
+	 * Official team number issued by FIRST.
 	 */
 
 	int team_number;

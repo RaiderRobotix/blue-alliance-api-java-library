@@ -19,21 +19,21 @@ public class Award {
 	String event_key;
 
 	/**
-	 * @return Integer representing the type of award given.
+	 * Integer representing the type of award given.
+	 * 
 	 * @see <a href="https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6">award_type.py</a>
 	 */
 	int award_type;
 
 	/**
-	 * @return The year this award was won.
+	 * The year this award was won.
 	 */
 	int year;
 
 	/**
-	 * @return A list of recipients of the award at the event.
+	 * A list of recipients of the award at the event.
 	 */
 	AwardRecipient[] recipient_list;
-
 
 	/**
 	 * An <code>AwardRecipient</code> object represents the team and/or person who received an award at an event.
@@ -42,12 +42,12 @@ public class Award {
 	public class AwardRecipient {
 
 		/**
-		 * @return The TBA team key for the team that was given the award. May be <code>null</code>.
+		 * The TBA team key for the team that was given the award. May be <code>null</code>.
 		 */
 		String team_key;
 
 		/**
-		 * @return The name of the individual given the award. May be <code>null</code>.
+		 * The name of the individual given the award. May be <code>null</code>.
 		 */
 		String awardee;
 	}

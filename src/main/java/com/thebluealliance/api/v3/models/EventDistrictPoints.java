@@ -13,7 +13,8 @@ public class EventDistrictPoints {
 	private HashMap<String, Tiebreaker> tiebreakers;
 
 	/**
-	 * @param teamNumber Team number used for a query
+	 * @param teamNumber
+	 *                       Team number used for a query
 	 * @return A {@link Tiebreaker} object for that team
 	 */
 	public Tiebreaker getTiebreaker(int teamNumber) {
@@ -21,7 +22,8 @@ public class EventDistrictPoints {
 	}
 
 	/**
-	 * @param teamNumber Team number used for a query
+	 * @param teamNumber
+	 *                       Team number used for a query
 	 * @return The {@link EventPoints} the team earned
 	 */
 	public EventPoints getEventPoints(int teamNumber) {
@@ -34,11 +36,11 @@ public class EventDistrictPoints {
 	@Value
 	public class Tiebreaker {
 		/**
-		 * @return Number of qualification match wins
+		 * Number of qualification match wins
 		 */
 		private int qual_wins;
 		/**
-		 * @return List of three highest qualification match scores
+		 * List of three highest qualification match scores
 		 */
 		private int[] highest_qual_scores;
 	}

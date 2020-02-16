@@ -9,19 +9,19 @@ import lombok.Value;
 public class Robot {
 
 	/**
-	 * @return Internal TBA identifier for this robot.
+	 * Internal TBA identifier for this robot.
 	 */
 	String key;
 	/**
-	 * @return Name of the robot as provided by the team.
+	 * Name of the robot as provided by the team.
 	 */
 	String robot_name;
 	/**
-	 * @return TBA team key for this robot.
+	 * TBA team key for this robot.
 	 */
 	String team_key;
 	/**
-	 * @return Year this robot competed in.
+	 * Year this robot competed in.
 	 */
 	int year;
 
