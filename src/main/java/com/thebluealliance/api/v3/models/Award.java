@@ -34,13 +34,10 @@ public class Award {
 	 */
 	AwardRecipient[] recipient_list;
 
+
 	/**
 	 * An <code>AwardRecipient</code> object represents the team and/or person who received an award at an event.
 	 */
-	public AwardRecipient[] getRecipientList() {
-		return recipient_list;
-	}
-
 	@Value
 	public class AwardRecipient {
 
