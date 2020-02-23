@@ -4,7 +4,3 @@ jdk:
 
 before_install:
   - chmod +x gradlew
-
-env:
-  global:
-    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
