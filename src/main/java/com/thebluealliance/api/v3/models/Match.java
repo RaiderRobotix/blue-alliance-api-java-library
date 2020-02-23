@@ -11,9 +11,11 @@ public class Match extends SimpleMatch {
 	ScoreBreakdown score_breakdown;
 	Media[] videos;
 
-	public Match(long post_result_time, ScoreBreakdown score_breakdown, Media[] videos) throws IllegalAccessException {
+	public Match() {
 		super(0, 0, null, null, null, null, 0, 0, 0, null);
-		throw new IllegalAccessException("bitch why ru calling this");
+		post_result_time = 0;
+		score_breakdown = null;
+		videos = null;
 	}
 
 }

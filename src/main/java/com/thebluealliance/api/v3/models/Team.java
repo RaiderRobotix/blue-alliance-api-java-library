@@ -1,9 +1,9 @@
 package com.thebluealliance.api.v3.models;
 
-import java.util.HashMap;
-
 import lombok.EqualsAndHashCode;
 import lombok.Value;
+
+import java.util.HashMap;
 
 /**
  * Represents a FIRST Robotics Competition team
@@ -12,9 +12,13 @@ import lombok.Value;
 @Value
 public class Team extends SimpleTeam {
 
-	Team() throws IllegalAccessException {
+	Team() {
 		super(null, null, null, null, null, null, 0);
-		throw new IllegalAccessException("You've called the constructor of Team");
+		postal_code = null;
+		website = null;
+		motto = null;
+		rookie_year = 0;
+		home_championship = null;
 	}
 
 	/**
